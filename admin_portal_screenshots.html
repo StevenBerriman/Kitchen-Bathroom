@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen and Bathroom NE Admin Portal - Screenshots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #1a56db;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #1e429f;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .screenshot-container {
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .screenshot {
+            width: 100%;
+            height: 500px;
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #1a56db;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .logo-icon {
+            background-color: white;
+            color: #1a56db;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .content {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f8fafc;
+            border-right: 1px solid #e2e8f0;
+            padding: 20px;
+        }
+        .sidebar-item {
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar-item.active {
+            background-color: #e6f0ff;
+            color: #1a56db;
+            font-weight: bold;
+        }
+        .sidebar-item:hover:not(.active) {
+            background-color: #f1f5f9;
+        }
+        .sidebar-icon {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9fafb;
+            overflow: auto;
+        }
+        .page-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .stat-info h3 {
+            font-size: 14px;
+            color: #6b7280;
+            margin: 0;
+        }
+        .stat-info p {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .blue-bg {
+            background-color: #e6f0ff;
+            color: #1a56db;
+        }
+        .green-bg {
+            background-color: #ecfdf5;
+            color: #047857;
+        }
+        .yellow-bg {
+            background-color: #fffbeb;
+            color: #b45309;
+        }
+        .purple-bg {
+            background-color: #f5f3ff;
+            color: #6d28d9;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th {
+            background-color: #f9fafb;
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #6b7280;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .table tr:hover {
+            background-color: #f9fafb;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .badge-blue {
+            background-color: #e6f0ff;
+            color: #1a56db;
+        }
+        .badge-green {
+            background-color: #ecfdf5;
+            color: #047857;
+        }
+        .badge-yellow {
+            background-color: #fffbeb;
+            color: #b45309;
+        }
+        .badge-red {
+            background-color: #fef2f2;
+            color: #b91c1c;
+        }
+        .badge-purple {
+            background-color: #f5f3ff;
+            color: #6d28d9;
+        }
+        .badge-gray {
+            background-color: #f3f4f6;
+            color: #4b5563;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+        }
+        .form-control {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #1a56db;
+            color: white;
+            border: none;
+        }
+        .btn-secondary {
+            background-color: white;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        .description {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f3f4f6;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kitchen and Bathroom NE Admin Portal - Screenshots</h1>
+    
+    <p>Below are mockups of the key interfaces in the admin portal, demonstrating the user experience and functionality.</p>
+
+    <h2>Login Page</h2>
+    <div class="screenshot-container">
+        <div class="screenshot" style="justify-content: center; align-items: center; background-color: #f3f4f6;">
+            <div style="width: 400px; background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <div style="width: 60px; height: 60px; background-color: #1a56db; color: white; font-size: 24px; font-weight: bold; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">KB</div>
+                    <h2 style="margin-top: 20px; color: #111827;">Kitchen & Bathroom NE</h2>
+                    <p style="color: #6b7280; margin-top: 5px;">Admin Portal Login</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <input type="email" placeholder="Email address" style="width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 6px 6px 0 0; font-size: 14px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="password" placeholder="Password" style="width: 100%; padding: 10px; border: 1px solid #d1d5db; border-top: none; border-radius: 0 0 6px 6px; font-size: 14px;">
+                </div>
+                <button style="width: 100%; padding: 10px; background-color: #1a56db; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer;">Sign in</button>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        The login page provides secure access to the admin portal. Staff members enter their email and password to authenticate. The system supports role-based access control, ensuring users only see features relevant to their role.
+    </div>
+
+    <h2>Dashboard</h2>
+    <div class="screenshot-container">
+        <div class="screenshot">
+            <div class="header">
+                <div class="logo">
+                    <div class="logo-icon">KB</div>
+                    <span>Kitchen & Bathroom NE</span>
+                </div>
+                <div>Admin Portal</div>
+            </div>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar-item active">
+                        <span class="sidebar-icon">📊</span>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">👥</span>
+                        <span>Customers</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📝</span>
+                        <span>Quotes</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">🏗️</span>
+                        <span>Projects</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">💬</span>
+                        <span>Messages</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📄</span>
+                        <span>Documents</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">👤</span>
+                        <span>Users</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">⚙️</span>
+                        <span>Settings</span>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="page-title">Dashboard</div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon blue-bg">📝</div>
+                            <div class="stat-info">
+                                <h3>Active Quotes</h3>
+                                <p>24</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon green-bg">🏗️</div>
+                            <div class="stat-info">
+                                <h3>Ongoing Projects</h3>
+                                <p>12</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon yellow-bg">💬</div>
+                            <div class="stat-info">
+                                <h3>New Messages</h3>
+                                <p>8</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon purple-bg">👥</div>
+                            <div class="stat-info">
+                                <h3>Total Customers</h3>
+                                <p>156</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h3 style="margin-top: 0; margin-bottom: 15px;">Recent Activity</h3>
+                            <div style="border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 10px;">
+                                <div style="display: flex; align-items: flex-start;">
+                                    <span style="font-size: 20px; margin-right: 10px;">📝</span>
+                                    <div>
+                                        <p style="margin: 0; font-weight: 500;">Dave Berriman created quote "Kitchen Renovation"</p>
+                                        <p style="margin: 0; font-size: 12px; color: #6b7280;">2 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 10px;">
+                                <div style="display: flex; align-items: flex-start;">
+                                    <span style="font-size: 20px; margin-right: 10px;">🏗️</span>
+                                    <div>
+                                        <p style="margin: 0; font-weight: 500;">Steve Berriman updated project "Bathroom Remodel"</p>
+                                        <p style="margin: 0; font-size: 12px; color: #6b7280;">4 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 10px;">
+                                <div style="display: flex; align-items: flex-start;">
+                                    <span style="font-size: 20px; margin-right: 10px;">💬</span>
+                                    <div>
+                                        <p style="margin: 0; font-weight: 500;">John Smith sent message "Quote Question"</p>
+                                        <p style="margin: 0; font-size: 12px; color: #6b7280;">6 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 10px;">
+                                <div style="display: flex; align-items: flex-start;">
+                                    <span style="font-size: 20px; margin-right: 10px;">👥</span>
+                                    <div>
+                                        <p style="margin: 0; font-weight: 500;">Stacey Berriman added customer "Sarah Johnson"</p>
+                                        <p style="margin: 0; font-size: 12px; color: #6b7280;">1 day ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: flex-start;">
+                                    <span style="font-size: 20px; margin-right: 10px;">📝</span>
+                                    <div>
+                                        <p style="margin: 0; font-weight: 500;">Michael Brown accepted quote "Kitchen Makeover"</p>
+                                        <p style="margin: 0; font-size: 12px; color: #6b7280;">1 day ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 style="margin-top: 0; margin-bottom: 15px;">Upcoming Tasks</h3>
+                            <div style="border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 10px;">
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" style="margin-right: 10px;">
+                                    <div>
+                                        <p style="margin: 0; font-weight: 500;">Follow up with John Smith about quote</p>
+                                        <p style="margin: 0; font-size: 12px; color: #6b7280;">Due today</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 10px;">
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" style="margin-right: 10px;">
+                                    <div>
+                                        <p style="margin: 0; font-weight: 500;">Prepare quote for Sarah Johnson</p>
+                                        <p style="margin: 0; font-size: 12px; color: #6b7280;">Due tomorrow</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 10px;">
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" style="margin-right: 10px;">
+                                    <div>
+                                        <p style="margin: 0; font-weight: 500;">Schedule installation for Brown project</p>
+                                        <p style="margin: 0; font-size: 12px; color: #6b7280;">Due in 2 days</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" style="margin-right: 10px;">
+                                    <div>
+                                        <p style="margin: 0; font-weight: 500;">Order materials for Wilson bathroom</p>
+                                        <p style="margin: 0; font-size: 12px; color: #6b7280;">Due in 3 days</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        The dashboard provides an at-a-glance overview of business activities. It displays key metrics (active quotes, ongoing projects, new messages, total customers), recent activity feed, and upcoming tasks. This central hub helps staff prioritize their work and stay informed about important updates.
+    </div>
+
+    <h2>Quotes Management</h2>
+    <div class="screenshot-container">
+        <div class="screenshot">
+            <div class="header">
+                <div class="logo">
+                    <div class="logo-icon">KB</div>
+                    <span>Kitchen & Bathroom NE</span>
+                </div>
+                <div>Admin Portal</div>
+            </div>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📊</span>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">👥</span>
+                        <span>Customers</span>
+                    </div>
+                    <div class="sidebar-item active">
+                        <span class="sidebar-icon">📝</span>
+                        <span>Quotes</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">🏗️</span>
+                        <span>Projects</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">💬</span>
+                        <span>Messages</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📄</span>
+                        <span>Documents</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">👤</span>
+                        <span>Users</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">⚙️</span>
+                        <span>Settings</span>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <div class="page-title">Quotes</div>
+                        <button class="btn btn-primary">Create Quote</button>
+                    </div>
+                    <div class="card">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Quote #</th>
+                                    <th>Customer</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Valid Until</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Q202500123</td>
+                                    <td>
+                                        <div>John Smith</div>
+                                        <div style="font-size: 12px; color: #6b7280;">john.smith@example.com</div>
+                                    </td>
+                                    <td>£4,250.00</td>
+                                    <td><span class="badge badge-blue">Sent</span></td>
+                                    <td>15/05/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Q202500122</td>
+                                    <td>
+                                        <div>Sarah Johnson</div>
+                                        <div style="font-size: 12px; color: #6b7280;">sarah.j@example.com</div>
+                                    </td>
+                                    <td>£8,750.00</td>
+                                    <td><span class="badge badge-yellow">Viewed</span></td>
+                                    <td>12/05/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Q202500121</td>
+                                    <td>
+                                        <div>Michael Brown</div>
+                                        <div style="font-size: 12px; color: #6b7280;">m.brown@example.com</div>
+                                    </td>
+                                    <td>£6,120.00</td>
+                                    <td><span class="badge badge-green">Accepted</span></td>
+                                    <td>10/05/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Q202500120</td>
+                                    <td>
+                                        <div>Emma Wilson</div>
+                                        <div style="font-size: 12px; color: #6b7280;">e.wilson@example.com</div>
+                                    </td>
+                                    <td>£3,890.00</td>
+                                    <td><span class="badge badge-red">Expired</span></td>
+                                    <td>01/04/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Q202500119</td>
+                                    <td>
+                                        <div>David Lee</div>
+                                        <div style="font-size: 12px; color: #6b7280;">david.lee@example.com</div>
+                                    </td>
+                                    <td>£5,430.00</td>
+                                    <td><span class="badge badge-gray">Draft</span></td>
+                                    <td>20/05/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        The Quotes Management page allows staff to create, view, edit, and track all customer quotes. Quotes are displayed with key information including quote number, customer details, total amount, status, and validity period. Color-coded status badges make it easy to identify quotes at different stages (draft, sent, viewed, accepted, expired). Staff can quickly access detailed quote information or make edits as needed.
+    </div>
+
+    <h2>Customer Messaging</h2>
+    <div class="screenshot-container">
+        <div class="screenshot">
+            <div class="header">
+                <div class="logo">
+                    <div class="logo-icon">KB</div>
+                    <span>Kitchen & Bathroom NE</span>
+                </div>
+                <div>Admin Portal</div>
+            </div>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📊</span>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">👥</span>
+                        <span>Customers</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📝</span>
+                        <span>Quotes</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">🏗️</span>
+                        <span>Projects</span>
+                    </div>
+                    <div class="sidebar-item active">
+                        <span class="sidebar-icon">💬</span>
+                        <span>Messages</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📄</span>
+                        <span>Documents</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">👤</span>
+                        <span>Users</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">⚙️</span>
+                        <span>Settings</span>
+                    </div>
+                </div>
+                <div class="main-content" style="padding: 0; display: flex; flex-direction: column;">
+                    <div style="padding: 20px; background-color: white; border-bottom: 1px solid #e5e7eb; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2 style="margin: 0; font-size: 20px;">Quote Question</h2>
+                            <p style="margin: 5px 0 0 0; font-size: 14px; color: #6b7280;">John Smith - john.smith@example.com</p>
+                        </div>
+                        <span class="badge badge-green">Active</span>
+                    </div>
+                    <div style="flex: 1; padding: 20px; background-color: #f3f4f6; overflow-y: auto;">
+                        <div style="text-align: center; margin: 10px 0;">
+                            <span style="font-size: 12px; background-color: #e5e7eb; padding: 2px 8px; border-radius: 10px; color: #6b7280;">Today</span>
+                        </div>
+                        <div style="display: flex; justify-content: flex-start; margin-bottom: 15px;">
+                            <div style="max-width: 70%; background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 15px;">
+                                <p style="margin: 0; font-size: 14px;">Hello, I received your quote for my kitchen renovation. I have a question about the countertop options. Do you offer quartz in addition to granite?</p>
+                                <p style="margin: 5px 0 0 0; font-size: 12px; color: #6b7280;">10:23 AM</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: flex-end; margin-bottom: 15px;">
+                            <div style="max-width: 70%; background-color: #1a56db; color: white; border-radius: 8px; padding: 10px 15px;">
+                                <p style="margin: 0; font-size: 14px;">Hi John, thanks for your message. Yes, we offer a wide range of quartz countertops in addition to granite. We have samples from brands like Silestone, Caesarstone, and Cambria. Would you like to see some options?</p>
+                                <p style="margin: 5px 0 0 0; font-size: 12px; color: #93c5fd;">10:45 AM</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: flex-start; margin-bottom: 15px;">
+                            <div style="max-width: 70%; background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 15px;">
+                                <p style="margin: 0; font-size: 14px;">That would be great. I'm particularly interested in light-colored options that would go well with white cabinets. Could you send me some examples?</p>
+                                <p style="margin: 5px 0 0 0; font-size: 12px; color: #6b7280;">11:02 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 15px; background-color: white; border-top: 1px solid #e5e7eb; display: flex;">
+                        <input type="text" placeholder="Type your message..." style="flex: 1; padding: 10px 15px; border: 1px solid #d1d5db; border-radius: 6px 0 0 6px; font-size: 14px;">
+                        <button style="background-color: #1a56db; color: white; border: none; border-radius: 0 6px 6px 0; padding: 0 20px; font-weight: 500;">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        The Customer Messaging interface enables direct communication between staff and customers. The conversation view displays messages in a chat-like format with clear visual distinction between customer messages and staff responses. Staff can see the conversation history and respond in real-time. This feature integrates with the customer mobile app, allowing seamless communication between your team and customers.
+    </div>
+
+    <h2>Document Management</h2>
+    <div class="screenshot-container">
+        <div class="screenshot">
+            <div class="header">
+                <div class="logo">
+                    <div class="logo-icon">KB</div>
+                    <span>Kitchen & Bathroom NE</span>
+                </div>
+                <div>Admin Portal</div>
+            </div>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📊</span>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">👥</span>
+                        <span>Customers</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📝</span>
+                        <span>Quotes</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">🏗️</span>
+                        <span>Projects</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">💬</span>
+                        <span>Messages</span>
+                    </div>
+                    <div class="sidebar-item active">
+                        <span class="sidebar-icon">📄</span>
+                        <span>Documents</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">👤</span>
+                        <span>Users</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">⚙️</span>
+                        <span>Settings</span>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <div class="page-title">Documents</div>
+                        <button class="btn btn-primary">Upload Document</button>
+                    </div>
+                    <div class="card">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Related To</th>
+                                    <th>Size</th>
+                                    <th>Uploaded</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Smith_Kitchen_Design.pdf</td>
+                                    <td>Design</td>
+                                    <td>
+                                        <div>John Smith</div>
+                                        <div style="font-size: 12px; color: #6b7280;">Customer</div>
+                                    </td>
+                                    <td>2.4 MB</td>
+                                    <td>15/04/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #047857;">Download</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Johnson_Contract_Signed.pdf</td>
+                                    <td>Contract</td>
+                                    <td>
+                                        <div>Quote #Q202500122</div>
+                                        <div style="font-size: 12px; color: #6b7280;">Quote</div>
+                                    </td>
+                                    <td>1.8 MB</td>
+                                    <td>12/04/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #047857;">Download</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Brown_Bathroom_Progress.jpg</td>
+                                    <td>Photo</td>
+                                    <td>
+                                        <div>Project #P202500018</div>
+                                        <div style="font-size: 12px; color: #6b7280;">Project</div>
+                                    </td>
+                                    <td>3.2 MB</td>
+                                    <td>10/04/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #047857;">Download</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Wilson_Invoice_April.pdf</td>
+                                    <td>Invoice</td>
+                                    <td>
+                                        <div>Emma Wilson</div>
+                                        <div style="font-size: 12px; color: #6b7280;">Customer</div>
+                                    </td>
+                                    <td>0.8 MB</td>
+                                    <td>05/04/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #047857;">Download</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Supplier_Catalog_2025.pdf</td>
+                                    <td>General</td>
+                                    <td>
+                                        <div>General</div>
+                                        <div style="font-size: 12px; color: #6b7280;">General</div>
+                                    </td>
+                                    <td>5.6 MB</td>
+                                    <td>01/04/2025</td>
+                                    <td>
+                                        <a href="#" style="color: #1a56db; margin-right: 10px;">View</a>
+                                        <a href="#" style="color: #047857;">Download</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        The Document Management system provides a central repository for all important files. Documents can be categorized and associated with specific customers, quotes, or projects for easy organization. Staff can upload, view, and download documents as needed. This feature helps keep all project-related files organized and accessible to the team.
+    </div>
+
+    <h2>User Management (Admin Only)</h2>
+    <div class="screenshot-container">
+        <div class="screenshot">
+            <div class="header">
+                <div class="logo">
+                    <div class="logo-icon">KB</div>
+                    <span>Kitchen & Bathroom NE</span>
+                </div>
+                <div>Admin Portal</div>
+            </div>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📊</span>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">👥</span>
+                        <span>Customers</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📝</span>
+                        <span>Quotes</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">🏗️</span>
+                        <span>Projects</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">💬</span>
+                        <span>Messages</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📄</span>
+                        <span>Documents</span>
+                    </div>
+                    <div class="sidebar-item active">
+                        <span class="sidebar-icon">👤</span>
+                        <span>Users</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">⚙️</span>
+                        <span>Settings</span>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <div class="page-title">Users</div>
+                        <button class="btn btn-primary">Add User</button>
+                    </div>
+                    <div class="card">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Last Login</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>Dave Berriman</div>
+                                        <div style="font-size: 12px; color: #6b7280;">dberriman</div>
+                                    </td>
+                                    <td>dave@kitchen-bathroom.co.uk</td>
+                                    <td><span class="badge badge-purple">Admin</span></td>
+                                    <td><span class="badge badge-green">Active</span></td>
+                                    <td>Today, 09:15 AM</td>
+                                    <td>
+                                        <a href="#" style="color: #b91c1c; margin-right: 10px;">Deactivate</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>Steve Berriman</div>
+                                        <div style="font-size: 12px; color: #6b7280;">sberriman</div>
+                                    </td>
+                                    <td>steve@kitchen-bathroom.co.uk</td>
+                                    <td><span class="badge badge-blue">Product Dev</span></td>
+                                    <td><span class="badge badge-green">Active</span></td>
+                                    <td>Today, 10:22 AM</td>
+                                    <td>
+                                        <a href="#" style="color: #b91c1c; margin-right: 10px;">Deactivate</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>Stacey Berriman</div>
+                                        <div style="font-size: 12px; color: #6b7280;">staceyb</div>
+                                    </td>
+                                    <td>stacey@kitchen-bathroom.co.uk</td>
+                                    <td><span class="badge badge-green">Marketing</span></td>
+                                    <td><span class="badge badge-green">Active</span></td>
+                                    <td>Yesterday, 16:45 PM</td>
+                                    <td>
+                                        <a href="#" style="color: #b91c1c; margin-right: 10px;">Deactivate</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>Jane Smith</div>
+                                        <div style="font-size: 12px; color: #6b7280;">jsmith</div>
+                                    </td>
+                                    <td>jane@kitchen-bathroom.co.uk</td>
+                                    <td><span class="badge badge-yellow">Administration</span></td>
+                                    <td><span class="badge badge-green">Active</span></td>
+                                    <td>15/04/2025, 11:30 AM</td>
+                                    <td>
+                                        <a href="#" style="color: #b91c1c; margin-right: 10px;">Deactivate</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>Mark Johnson</div>
+                                        <div style="font-size: 12px; color: #6b7280;">mjohnson</div>
+                                    </td>
+                                    <td>mark@kitchen-bathroom.co.uk</td>
+                                    <td><span class="badge badge-blue">Product Dev</span></td>
+                                    <td><span class="badge badge-red">Inactive</span></td>
+                                    <td>10/03/2025, 09:15 AM</td>
+                                    <td>
+                                        <a href="#" style="color: #047857; margin-right: 10px;">Activate</a>
+                                        <a href="#" style="color: #4f46e5;">Edit</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        The User Management page is accessible only to administrators and provides tools to manage staff accounts. Admins can create new users, assign appropriate roles (Admin, Product Development, Marketing, Administration), and manage access permissions. The interface displays user status, last login time, and allows for account activation/deactivation. This ensures proper security and access control within the admin portal.
+    </div>
+</body>
+</html>
